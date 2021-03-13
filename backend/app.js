@@ -1,8 +1,10 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose')
 const cors = require('cors')
 
+console.log(process.env)
 
 mongoose
     .connect(process.env.MONGODB_URI || 'mongodb://localhost/IronIverson', { useNewUrlParser: true, useUnifiedTopology: true })
@@ -13,7 +15,7 @@ mongoose
 
 app.use(cors({
     credentials: true,
-    origin: ['http://localhost:3000']
+    origin: ['http://localhost:3000', process.env.clientURL]
 }))
 
 app.use(express.json())
