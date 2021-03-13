@@ -15,7 +15,7 @@ class App extends Component {
 
   async componentDidMount() {
     let user = await actions.getUser()
-    console.log(user)
+    console.log('user is ', user)
     this.setState({ user })
   }
 
