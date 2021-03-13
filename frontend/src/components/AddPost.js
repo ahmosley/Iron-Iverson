@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import actions from '../api'
+
 class AddPost extends Component {
 
     state = {
@@ -8,7 +10,9 @@ class AddPost extends Component {
 
     handleSubmit = async (event) => {
         event.preventDefault()
-        let res = await axios.post(`http://localhost:5000/api/addAPost`, this.state)
+        // let res = await axios.post(`http://localhost:5000/api/addAPost`, this.state)
+
+        let res = await actions.addPost(this.state)
         this.props.history.push('/')
 
     }
@@ -16,7 +20,6 @@ class AddPost extends Component {
 
 
     render() {
-        console.log(this)
         return (
             <div>
 
