@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import axios from 'axios'
 import actions from '../api'
@@ -12,6 +13,7 @@ class AddPost extends Component {
         event.preventDefault()
         // let res = await axios.post(`http://localhost:5000/api/addAPost`, this.state)
 
+        
         let res = await actions.addPost(this.state)
         this.props.history.push('/')
 

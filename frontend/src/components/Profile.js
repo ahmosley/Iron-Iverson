@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import actions from "../api";
-
 class Profile extends Component {
   state = {
     posts: [],
@@ -27,13 +26,14 @@ class Profile extends Component {
     console.log(this);
     return (
       <div>
-        Profile
         <h2>{this.props.user?.email}</h2>
+        Countries I want to visit
         {this.showMyPosts()}
         <button onClick={this.logOut}>Log out</button>
       </div>
     );
   }
 }
+
 
 export default Profile;
