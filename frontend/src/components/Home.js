@@ -4,8 +4,14 @@ import actions from '../api'
 
 class Home extends Component {
 
-    state = {
+    _state = {
         posts: []
+    };
+    get state() {
+        return this._state;
+    }
+    set state(value) {
+        this._state = value;
     }
 
     async componentDidMount() {
@@ -25,7 +31,7 @@ class Home extends Component {
         return (
             <div>
                 Home
-                {this.showPosts()}
+               
             </div>
         );
     }

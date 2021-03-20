@@ -26,15 +26,13 @@ class App extends Component {
   render() {
     return (
       <main className="App">
-        <h1>🧨 Iron Plate 🚀</h1>
-        <h2>{this.state.user?.email} <img src={this.state.user?.imageUrl} /></h2>
         <nav>
           <Link to="/">Home</Link>
           <Link to="/add-post">Add Post</Link>
           {this.state.user.email ? <Link to="/profile">Profile</Link> : <Link to="/auth"> Log In</Link>}
-
-
         </nav>
+        <h1>Travelapp ✈️✈️</h1>
+        
 
 
         <Switch>
