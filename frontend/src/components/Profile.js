@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import actions from "../api";
+
 class Profile extends Component {
   state = {
     posts: [],
@@ -21,7 +22,7 @@ class Profile extends Component {
       return <li key={eachPost._id}> {eachPost.message} </li>;
     });
   };
-
+ 
   render() {
     console.log(this);
     return (
@@ -34,6 +35,5 @@ class Profile extends Component {
     );
   }
 }
-
 
 export default Profile;

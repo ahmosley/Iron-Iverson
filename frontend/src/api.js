@@ -32,10 +32,10 @@ const actions = {
         //Set JWT token to localStorage
         localStorage.setItem('token', res.data.token)
         return res.data.user
-    }
-
+    },
 
 }
+
 
 export default actions
 

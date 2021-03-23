@@ -69,13 +69,6 @@ router.post('/logMeIn', async (req, res) => {
 })
 
 
-
-
-
-
-
-
-
 function authorize(req, res, next) {
     let token = req.headers['authorization'].split(' ')[1]
 
