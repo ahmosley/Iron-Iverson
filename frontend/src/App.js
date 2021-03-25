@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import AddPost from "./components/AddPost";
 import Auth from "./components/Auth";
 import Profile from "./components/Profile";
-import Vacation from "./components/Vacation"; 
+import Vacation from "./components/Vacation";
 import { Switch, Route, Link } from "react-router-dom";
 import actions from "./api";
 
