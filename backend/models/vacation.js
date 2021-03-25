@@ -1,7 +1,7 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const { Schema, model, ObjectId } = require('mongoose')
 
-let VacationSchema = new Schema({
+
+const VacationSchema = new Schema({
   name: {
     type: String
   },
@@ -18,4 +18,4 @@ let VacationSchema = new Schema({
     collection: 'vacation'
   })
 
-module.exports = mongoose.model('Vacation', vacationSchema)
+module.exports = model('Vacation', VacationSchema)

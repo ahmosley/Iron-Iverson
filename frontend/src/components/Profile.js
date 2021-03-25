@@ -22,7 +22,11 @@ class Profile extends Component {
       return <li key={eachPost._id}> {eachPost.message} </li>;
     });
   };
- 
+
+  handleRemovePost = () => {
+
+  }
+
   render() {
     console.log(this);
     return (
